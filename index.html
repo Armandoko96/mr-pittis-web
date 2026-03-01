@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Pitti's - Tacos de Asada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="assets/logo/Logo.svg" alt="Mr. Pitti's Logo" class="logo">
+            </div>
+            <h1>Tacos de Asada</h1>
+            <p class="tagline">Â¡El sabor de la verdadera carne asada!</p>
+        </header>
+
+        <main class="links-container">
+            <a href="https://wa.me/521234567890" target="_blank" class="btn btn-whatsapp">
+                <span class="btn-icon">ðŸ’¬</span> WhatsApp: Haz tu pedido
+            </a>
+
+            <a href="https://drive.google.com/open?id=1SU6T_aqhpDgZ6oFFyn7PoEugKFezrdnE&usp=drive_fs" target="_blank"
+                class="btn btn-primary main-cta">
+                <span class="btn-icon">ðŸ“‹</span> Ver MenÃº Completo
+            </a>
+
+            <div class="social-grid">
+                <a href="https://www.facebook.com/share/14TB3fF2Bv2/" target="_blank" class="btn btn-social fb">
+                    <span class="btn-icon">Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/mr.pittis?igsh=MXgzNjY0bm1qb29xcw==" target="_blank"
+                    class="btn btn-social ig">
+                    <span class="btn-icon">Instagram</span>
+                </a>
+            </div>
+
+            <section class="video-section">
+                <h2>Momentos Mr. Pitti's</h2>
+                <div class="video-container">
+                    <video id="pitti-video" muted loop playsinline controls preload="none"
+                        poster="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.19 PM.jpeg">
+                        <source src="assets/video/mrpittis_promo.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+
+            <script>
+                // OptimizaciÃ³n y Control: Autoplay silenciado al entrar en vista
+                const video = document.getElementById('pitti-video');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            video.preload = "auto";
+                            // Intentamos reproducir (por polÃ­tica de navegador debe ser muted)
+                            video.play().catch(error => console.log("Autoplay bloqueado:", error));
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }, { threshold: 0.3 });
+                observer.observe(video);
+            </script>
+
+            <section class="promo-section">
+                <!-- Seccion de promociones vacia por ahora -->
+                <h2>PrÃ³ximamente: Promociones</h2>
+                <div class="promo-container">
+                    <p>Â¡Mantente al tanto de nuestras ofertas exclusivas!</p>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Un vistazo a nuestro sabor</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.19 PM.jpeg"
+                            alt="Taco 1"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM (1).jpeg"
+                            alt="Taco 2"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM (2).jpeg"
+                            alt="Taco 3"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM (3).jpeg"
+                            alt="Taco 4"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM (4).jpeg"
+                            alt="Taco 5"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM (5).jpeg"
+                            alt="Taco 6"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.20 PM.jpeg"
+                            alt="Taco 7"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM (1).jpeg"
+                            alt="Taco 8"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM (2).jpeg"
+                            alt="Taco 9"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM (3).jpeg"
+                            alt="Taco 10"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM (4).jpeg"
+                            alt="Taco 11"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM (5).jpeg"
+                            alt="Taco 12"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.21 PM.jpeg"
+                            alt="Taco 13"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.22 PM (1).jpeg"
+                            alt="Taco 14"></div>
+                    <div class="gallery-item"><img src="assets/gallery/WhatsApp Image 2026-02-28 at 8.58.22 PM.jpeg"
+                            alt="Taco 15"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Â© 2026 Mr. Pitti's MX.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
