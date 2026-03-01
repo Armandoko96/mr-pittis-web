@@ -1,0 +1,21 @@
+# Carpeta de sistema y logs
+.system_generated/
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/
+
+# Archivos temporales
+tmp/
+*.tmp
+*.log
+
+# Firebase (si se inicializa luego)
+.firebase/
+firebase-debug.log
+firebaserc
+
+assets/video/
+
+assets/gallery/
