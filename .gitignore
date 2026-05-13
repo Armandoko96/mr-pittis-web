@@ -15,7 +15,3 @@ tmp/
 .firebase/
 firebase-debug.log
 firebaserc
-
-assets/video/
-
-assets/gallery/
